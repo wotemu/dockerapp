@@ -1,0 +1,335 @@
+Started GET "/" for 172.19.0.1 at 2022-03-31 12:35:19 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.5ms)
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4746047786290814850', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateNotes (20160830215403)
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE `notes` (`id` int AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160830215403')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-03-31 12:38:25', '2022-03-31 12:38:25')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4746047786290814850')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `notes`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'notes'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'noteapp'
+  AND fk.table_name = 'notes'
+[0m
+Started GET "/" for 172.19.0.1 at 2022-03-31 12:40:18 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/bundle/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 20ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 172.19.0.1 at 2022-03-31 12:40:50 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_top_nav.html.erb (0.6ms)
+Completed 200 OK in 1406ms (Views: 1351.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/notes/new" for 172.19.0.1 at 2022-03-31 12:40:55 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (47.2ms)
+  Rendered notes/new.html.erb within layouts/application (68.4ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 224ms (Views: 198.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/notes" for 172.19.0.1 at 2022-03-31 12:41:25 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bnP3FD73OQqvg4m+rIAcjwNx0B5jPvtbb7veUgCybcBsE6761F5Apg0OMq1glSQePLCriBT0qJPFqkTIWjBvUw==", "note"=>{"title"=>"First note", "body"=>"Note 123 is working"}, "commit"=>"Save Note"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `notes` (`title`, `body`, `created_at`, `updated_at`) VALUES ('First note', 'Note 123 is working', '2022-03-31 12:41:25', '2022-03-31 12:41:25')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3001/notes/1
+Completed 302 Found in 12ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/notes/1" for 172.19.0.1 at 2022-03-31 12:41:25 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT  `notes`.* FROM `notes` WHERE `notes`.`id` = 1 LIMIT 1[0m
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+Completed 200 OK in 193ms (Views: 147.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notes" for 172.19.0.1 at 2022-03-31 12:42:31 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+Completed 200 OK in 173ms (Views: 140.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 172.19.0.1 at 2022-03-31 12:42:34 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+Completed 200 OK in 141ms (Views: 121.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 172.19.0.1 at 2022-03-31 12:42:37 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+Completed 200 OK in 139ms (Views: 121.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 172.19.0.1 at 2022-03-31 12:42:39 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+Completed 200 OK in 142ms (Views: 126.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 172.19.0.1 at 2022-03-31 12:42:40 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+Completed 200 OK in 142ms (Views: 123.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 172.19.0.1 at 2022-03-31 12:45:33 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/bundle/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.20.0.1 at 2022-04-01 10:39:01 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.8ms)
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4746047786290814850', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateNotes (20160830215403)
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE `notes` (`id` int AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160830215403')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-04-01 10:40:40', '2022-04-01 10:40:40')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4746047786290814850')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `notes`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'notes'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'noteapp'
+  AND fk.table_name = 'notes'
+[0m
+Started GET "/" for 172.20.0.1 at 2022-04-01 10:41:30 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/bundle/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 23ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 172.20.0.1 at 2022-04-01 10:41:46 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_top_nav.html.erb (0.4ms)
+Completed 200 OK in 674ms (Views: 607.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/notes/new" for 172.20.0.1 at 2022-04-01 10:41:50 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (76.9ms)
+  Rendered notes/new.html.erb within layouts/application (97.1ms)
+  Rendered layouts/_top_nav.html.erb (0.6ms)
+Completed 200 OK in 254ms (Views: 221.0ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/notes" for 172.20.0.1 at 2022-04-01 10:42:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WUoJ2kbXhOfndHv9fthBAwJvZAkI+pgj+IkvWI+iPUgJRXdbaQsXSYfYbTpi1zcDVP0sUSvU7XRjvfHbbyvNZQ==", "note"=>{"title"=>"First note", "body"=>"Hi, I am the first note"}, "commit"=>"Save Note"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `notes` (`title`, `body`, `created_at`, `updated_at`) VALUES ('First note', 'Hi, I am the first note', '2022-04-01 10:42:04', '2022-04-01 10:42:04')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3001/notes/1
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/notes/1" for 172.20.0.1 at 2022-04-01 10:42:04 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT  `notes`.* FROM `notes` WHERE `notes`.`id` = 1 LIMIT 1[0m
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 170ms (Views: 135.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 172.20.0.1 at 2022-04-01 10:42:07 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT `notes`.* FROM `notes`[0m
+  Rendered notes/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_top_nav.html.erb (0.5ms)
+Completed 200 OK in 144ms (Views: 121.7ms | ActiveRecord: 0.4ms)
+
+
