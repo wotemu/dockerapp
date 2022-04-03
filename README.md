@@ -23,4 +23,5 @@ docker-compose up
 docker-compose run --rm app rails g scaffold note title body:text
 docker-compose run --rm app rake db:migrate
 # http://localhost:3001/notes
+#
 ```
